@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/caae6b21c5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav>
+        <h1><i class="bi bi-cloud-fog2"></i>Accu<span>Weather</span></h1>
+        <ul id="nav-links">
+            <li><a href="./">Home</a></li>
+            <li><a href="/">API</a></li>
+            <li><button>Buy Me a Coffee</button></li>
+
+        </ul>
+    </nav>
+
+    <div id="content-outer-div">
+        <div id="search-div">
+            <input type="text" id="search-input" name="search" placeholder="Search" onchange="sendRequest(this.value)">
+            <i class="bi bi-search"></i>
+        </div>
+        <div id="card">
+        <div class="skeleton card2"></div>
+            <div class="circle"></div>
+            <div class="card-header">
+                <div class="weather-header">
+                    <i id="weather-icon" class="bi bi-brightness-high-fill"></i>
+                    <h4 id="weather-main">Sunny</h4>
+                </div>
+                <div class="location-header">
+                    <h1 id="city-name">Nagpur</h1>
+                    <h4 id="date-time">29/07/2002 | 09:00 AM</h4>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-body-content">
+                    <i class="bi bi-droplet-half"></i>
+                    <h3>Humidity</h3>
+                    <h4 id="humidity">00</h4>
+                </div>
+                <div class="card-body-content">
+                    <i class="bi bi-wind"></i>
+                    <h3>Wind</h3>
+                    <h4 id="wind">00</h4>
+                </div>
+                <div class="card-body-content">
+                    <i class="bi bi-thermometer-half"></i>
+                    <h3>Temperatue</h3>
+                    <h4 id="temp">00</h4>
+                </div>
+                
+                
+            </div>
+            <div class="card-footer">
+                <div class="card-footer-content">
+                    <i class="bi bi-tropical-storm"></i>
+                    <h4 id="pressure">00</h4>
+                </div>
+                <div class="card-footer-content">
+                    <i class="bi bi-thermometer"></i>
+                    <h4 id="min-temp">00</h4>
+                </div>
+                <div class="card-footer-content">
+                    <i class="bi bi-thermometer-high"></i>
+                    <h4 id="max-temp">00</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
